@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang thông tin cá nhân</title>
+</head>
+
+<body>
+
+    <table border="1" width="700">
+        <tr>
+            <td>
+
+                <h2>NGUYỄN HOÀI KHANG</h2>
+                <b>Trang thông tin cá nhân</b>
+
+                <table border="1" width="100%">
+                    <tr>
+                        <td width="100">
+                            <img src="assets/images/avatar.jpg" width="80">
+                        </td>
+                        <td>
+                            <b>Giới thiệu bản thân</b><br>
+                            Xin chào! Tôi là <b>Khang</b>, sinh viên ngành <b>Công nghệ thông tin</b>.<br>
+                            Tôi yêu thích lập trình và thiết kế web. Mục tiêu của tôi là trở thành lập trình viên.<br>
+                            Tôi đang học tại <b>Đại học Trà Vinh</b> và luôn cố gắng phát triển kỹ năng mỗi ngày.
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <b>Thông tin chi tiết</b>
+                <table border="1">
+                    <tr>
+                        <th>Thông tin</th>
+                        <th>Nội dung</th>
+                    </tr>
+                    <tr>
+                        <td>Họ và tên</td>
+                        <td>Nguyễn Hoài Khang</td>
+                    </tr>
+                    <tr>
+                        <td>Tuổi</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Lớp</td>
+                        <td>DA24TTC</td>
+                    </tr>
+                    <tr>
+                        <td>Trường</td>
+                        <td>Đại học Trà Vinh</td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <b>Sở thích</b>
+                <ul>
+                    <li>Chơi bóng chuyền</li>
+                    <li>Xem phim</li>
+                </ul>
+
+                <b>Kỹ năng và mục tiêu</b>
+                <ol>
+                    <li>Biết HTML cơ bản</li>
+                    <li>Có thể giao tiếp tốt Tiếng  Anh</li>
+                    <li>Trở thành 1 phiên bản tốt hơn </li>
+                </ol>
+
+                <b>Liên hệ</b><br>
+                Facebook: <a href="https://www.facebook.com/share/1DFbZ568z6/?mibextid=wwXIfr">Trang Facebook của tôi</a><br>
+                Email: <a href="mailto:110124088@st.tvu.edu.vn">110124088@st.tvu.edu.vn</a>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
