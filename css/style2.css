@@ -52,7 +52,7 @@ form h3.title {
 .button {
     background-color: steelblue; 
     color: white; 
-    border: none;
+    border: none; 
     border-radius: 5px;
     padding: 12px;
     margin-top: 15px;
