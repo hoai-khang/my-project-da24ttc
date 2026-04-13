@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiết kế form - Đăng ký</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="frmRegister">
+            <h3 class="title">Đăng ký tài khoản</h3>
+
+            <div class="form-group">
+                <label class="label" for="txtName">Tên: </label>
+                <input class="form-control" type="text" id="txtName" name="txtName">
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="txtEmail">Email: </label>
+                <input class="form-control" type="email" id="txtEmail" name="txtEmail">
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="txtPassword">Mật khẩu: </label>
+                <input class="form-control" type="password" id="txtPassword" name="txtPassword">
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="txtConfirmPassword">Xác nhận mật khẩu: </label>
+                <input class="form-control" type="password" id="txtConfirmPassword" name="txtConfirmPassword">
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="txtPhone">Số điện thoại: </label>
+                <input class="form-control" type="text" id="txtPhone" name="txtPhone">
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="txtAddress">Nhập địa chỉ: </label>
+                <input class="form-control" type="text" id="txtAddress" name="txtAddress">
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="slClass">Chọn lớp: </label>
+                <select class="form-control" id="slClass" name="slClass">
+                    <option value="">-- Chọn lớp của bạn --</option>
+                    <option value="DA24TTC">DA24TTC</option>
+                    <option value="DA24TTA">DA24TTA</option>
+                    <option value="DA24TTB">DA24TTB</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="txtDob">Ngày sinh: </label>
+                <input class="form-control" type="date" id="txtDob" name="txtDob">
+            </div>
+
+            <div class="form-group">
+                <label class="label">Giới tính: </label>
+                <div style="padding-top: 5px;">
+                    <input type="radio" id="genderMale" name="gender" value="Nam">
+                    <label for="genderMale" style="color: dimgray; margin-right: 15px;">Nam</label>
+                    
+                    <input type="radio" id="genderFemale" name="gender" value="Nữ">
+                    <label for="genderFemale" style="color: dimgray;">Nữ</label>
+                </div>
+            </div>
+            <input class="button" type="submit" id="sbRegister" name="sbRegister" value="Tạo tài khoản">
+        </form>
+    </div>
+</body>
+</html>
