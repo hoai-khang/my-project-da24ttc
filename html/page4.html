@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiết kế form - Đăng ký</title>
+    <link rel="stylesheet" href="../css/style4.css">
+</head>
+
+<body>
+    <div class="container">
+        <table Border = "1"> 
+<tr>
+    <th> Tên Sản Phẩm</th>
+    <th> Số Lượng</th>
+    <th> Đơn Giá </th>
+    <th>Thành Tiền</th>
+</tr>
+     <tr>
+        <td>Bút đỏ</td>
+        <td class = "sl">3</td>
+         <td class = "dg">4000</td>
+          <td class = "tt"></td>
+          
+     </tr>
+     <tr>
+        <td>Bút Xanh</td>
+        <td class = "sl">4</td>
+         <td class = "dg">4000</td>
+          <td class = "tt"></td>
+     </tr>
+     <tr>
+        <td>Nước Suối</td>
+        <td class = "sl">5</td>
+         <td class = "dg">6000</td>
+          <td class = "tt"></td>
+     </tr>
+     <tr>
+        <td colspan = "3">Tổng Thanh Toán</td>
+         <td id = "kq"></td>
+     </tr>
+        </table>
+       
+    </div>
+    <Script>
+        const soLuong = document.getElementsByClassName("sl");
+         const donGia = document.getElementsByClassName("dg");
+          const thanhTien = document.getElementsByClassName("tt");
+          let tongThanhToan = 0;
+
+          //Duyệt qua mỗi dòng
+          for(let i =0; i<soLuong.length; i++)
+          {
+            thanhTien[i].innerHTML = soLuong [i].innerHTML *donGia [i].innerHTML;
+           
+            tongThanhToan += parseInt(thanhTien[i].innerHTML)
+          }
+          document.getElementById("kq").innerHTML = tongThanhToan;
+    </Script>
+</body>
+</html>
