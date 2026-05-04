@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/style6.css">
+</head>
+<body>
+    <div class="container">
+        <h2>TÍNH HỌC PHÍ</h2>
+        
+        <div class="action-buttons">
+            <button onclick="themMonHoc()">Thêm môn học</button>
+            <button onclick="tinhHocPhi()">Tính học phí</button>
+        </div>
+
+        <div id="danhSachMonHoc">
+        </div>
+
+        <div id="ketQua" class="result"></div>
+    </div>
+
+    <script>
+        let demDong = 0;
+
+        function themMonHoc() {
+            demDong++;
+            const vungDanhSach = document.getElementById("danhSachMonHoc");
+
+            const row = document.createElement("div");
+            row.setAttribute("class", "row");
+
+            const txtTenMon = document.createElement("input");
+            txtTenMon.setAttribute("type", "text");
+            txtTenMon.setAttribute("placeholder", "Nhập tên môn");
+
+            const txtTinChi = document.createElement("input");
+            txtTinChi.setAttribute("type", "number");
+            txtTinChi.setAttribute("placeholder", "Số tín chỉ");
+            txtTinChi.setAttribute("class", "soTinChi");
+            txtTinChi.setAttribute("min", "1");
+
+            const radCoSo = document.createElement("input");
+            radCoSo.setAttribute("type", "radio");
+            radCoSo.setAttribute("name", "loaiMon" + demDong);
+            radCoSo.setAttribute("value", "300000"); 
+            radCoSo.setAttribute("class", "donGia");
+            radCoSo.checked = true;
+            const lblCoSo = document.createTextNode(" Cơ sở ");
+
+            const radChuyenNganh = document.createElement("input");
+            radChuyenNganh.setAttribute("type", "radio");
+            radChuyenNganh.setAttribute("name", "loaiMon" + demDong);
+            radChuyenNganh.setAttribute("value", "400000"); 
+            radChuyenNganh.setAttribute("class", "donGia");
+            const lblChuyenNganh = document.createTextNode(" Chuyên ngành ");
+
+            const btnXoa = document.createElement("button");
+            const txtBtnXoa = document.createTextNode("Xóa");
+            btnXoa.setAttribute("class", "btn-xoa");
+            btnXoa.appendChild(txtBtnXoa);
+            
+            btnXoa.onclick = function() {
+                vungDanhSach.removeChild(row);
+            };
+
+            row.appendChild(txtTenMon);
+            row.appendChild(txtTinChi);
+            row.appendChild(radCoSo);
+            row.appendChild(lblCoSo);
+            row.appendChild(radChuyenNganh);
+            row.appendChild(lblChuyenNganh);
+            row.appendChild(btnXoa);
+
+            vungDanhSach.appendChild(row);
+        }
+
+        function tinhHocPhi() {
+            const cacDong = document.getElementsByClassName("row");
+            let tongTien = 0;
+
+            for (let i = 0; i < cacDong.length; i++) {
+                const dongHienTai = cacDong[i];
+                const oTinChi = dongHienTai.querySelector(".soTinChi");
+                const cacODonGia = dongHienTai.querySelectorAll(".donGia");
+
+                let tinChi = parseInt(oTinChi.value);
+                if (isNaN(tinChi)) tinChi = 0;
+
+                let donGia = 0;
+                for (let j = 0; j < cacODonGia.length; j++) {
+                    if (cacODonGia[j].checked) {
+                        donGia = parseInt(cacODonGia[j].value);
+                        break;
+                    }
+                }
+
+                tongTien += (tinChi * donGia);
+            }
+
+            document.getElementById("ketQua").innerHTML = "Tổng thanh toán: " + tongTien.toLocaleString('vi-VN') + " VNĐ";
+        }
+    </script>
+</body>
+</html>
